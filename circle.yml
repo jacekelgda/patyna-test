@@ -12,6 +12,7 @@ machine:
   hosts:
     circlehost: 127.0.0.1
     dev.mycompany.com: 127.0.0.1
+    patyna-wp: 46.101.190.15
   environment:
     TEST_ENV: test
 
@@ -31,4 +32,6 @@ deployment:
   PROD:
     branch: master
     commands:
-      - echo "deployment"
+      - date
+      - ls ~/.ssh/
+      - ssh root@patyna-wp sh test.sh
