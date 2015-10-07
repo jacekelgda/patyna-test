@@ -1,16 +1,17 @@
 machine:
-
   timezone:
     Europe/Warsaw
-
-  ruby:
-    version:
-      1.8.7-p358-falcon-perf
-
+  python:
+    version: 2.7.3
+  php:
+    version: 5.5.11
+  node:
+    version: 0.10.33
+  services:
+    - docker
   hosts:
     circlehost: 127.0.0.1
     dev.mycompany.com: 127.0.0.1
-
   environment:
     TEST_ENV: test
 
