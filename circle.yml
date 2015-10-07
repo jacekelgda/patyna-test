@@ -28,7 +28,7 @@ test:
     - echo "no test"
 
 deployment:
-  master:
-    branch: deploy-test
+  PROD:
+    branch: master
     commands:
       - echo "deployment"
