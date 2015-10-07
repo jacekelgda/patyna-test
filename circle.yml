@@ -1,0 +1,31 @@
+machine:
+
+  timezone:
+    Europe/Warsaw
+
+  ruby:
+    version:
+      1.8.7-p358-falcon-perf
+
+  hosts:
+    circlehost: 127.0.0.1
+    dev.mycompany.com: 127.0.0.1
+
+  environment:
+    TEST_ENV: test
+
+checkout:
+  post:
+    - echo "checkout"
+
+dependencies:
+  pre:
+    - echo "pre"
+
+test:
+  override:
+    - echo "no test"
+
+deployment:
+  TEST:
+    branch: deploy-test
